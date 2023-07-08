@@ -23,7 +23,6 @@ a {
 }
 h1 {
   font-size: var(--font1);
-  font-weight: bold;
 }
 h2 {
   font-size: var(--font2);
@@ -50,7 +49,7 @@ h5 {
 
 .yellow-btn {
   align-self: stretch;
-  padding:26px 38px ;
+  padding: 26px 38px;
 
   display: flex;
   align-items: center;
@@ -59,6 +58,7 @@ h5 {
   text-align: center;
   color: var(--base);
   font-weight: bold;
+  font-size: var(--font4);
 
   background-color: var(--acid1);
   border: 3px solid var(--acid1);
@@ -68,6 +68,10 @@ h5 {
 .yellow-btn > span {
   display: block;
   width: max-content;
+}
+
+.base-text {
+  color: var(--base);
 }
 
 .acid1-text {
@@ -80,20 +84,24 @@ h5 {
 .bold-text {
   font-weight: bold;
 }
-.light-text {
-  font-weight: 300;
+
+.normal-text {
+  font-weight: normal;
 }
 
 .horizontal {
-    margin-top: auto;
-    display: flex;
+  margin-top: auto;
+  margin-bottom: 20px;
 
+  width: fit-content;
+
+  display: flex;
   justify-content: space-between;
   align-items: center;
 
   background-color: #333;
   border-radius: 10px;
-  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.25) inset;
+  box-shadow: 0px 0px 20px 0px var(--base) inset;
   backdrop-filter: blur(10px);
 
   overflow: hidden;
@@ -208,7 +216,7 @@ header {
 
   min-height: calc(100vh - 135px);
 
-  background: url("./images//wallpaper.svg");
+  background: url("./images/index/main-section/wallpaper.svg");
   background-repeat: no-repeat;
   background-color: var(--base);
   background-position: center;
@@ -223,7 +231,7 @@ header {
   bottom: 0;
   right: 0;
 
-  background: url("./images/smoke.svg");
+  background: url("./images/index/main-section/smoke.svg");
   background-repeat: no-repeat;
   z-index: 2;
 }
@@ -236,7 +244,7 @@ header {
   bottom: 0;
   right: 0;
 
-  background: url("./images/thief.png");
+  background: url("./images/index/main-section/thief.png");
   background-size: 100%;
   background-repeat: no-repeat;
   z-index: 1;
@@ -247,4 +255,135 @@ header {
   justify-content: flex-start;
   align-items: center;
   color: white;
+}
+
+/*Eqipment section*/
+
+.equipment {
+  position: relative;
+  margin-top: -50px;
+  padding: 0 230px 50px 150px;
+
+overflow: hidden;
+  z-index: 4;
+}
+
+.equipment::after {
+  content: '';
+
+  position: absolute;
+  top: 120%;
+  left: 80%;
+  width: 643px;
+  aspect-ratio: 1/2;
+
+  background-image: url('./images/index/equipment-section/circle.svg');
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  
+  transform: translate(-50%, -50%);
+  z-index: 0;
+
+}
+
+
+.wrapper {
+  position: relative;
+  padding: 100px;
+
+  min-height: 80vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 50px;
+
+  border-radius: 10px;
+  background: var(--acid2);
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.1);
+
+  z-index: 3;
+}
+
+.wrapper::after {
+  content: "";
+
+  position: absolute;
+
+  right: -150px;
+  bottom: -100px;
+
+  width: 45%;
+  aspect-ratio: 1.4;
+
+  background: url("./images//index/equipment-section/robot.svg");
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+
+}
+
+.equipment-title {
+  width: 80%;
+}
+
+.equipment-list {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.equipment-list-item {
+  display: flex;
+
+  width: 32%;
+}
+
+.equipment-desc {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-flow: column;
+}
+
+.location-list {
+  width: 60%;
+
+  display: flex;
+  gap: 20px;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.location-list-item {
+  padding: 20px;
+
+  border-radius: 10px;
+  background: var(--acid2);
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.1);
+}
+
+.location-list-item > span::before {
+  content: "";
+  margin-right: 20px;
+
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+
+  background-color: var(--acid1);
+  border-radius: 50%;
+}
+
+
+@media only screen and (max-width: 1690px) {
+  :root {
+    --font1: 56px;
+    --font2: 32px;
+    --font3: 26px;
+    --font4: 24px;
+    --font5: 22px;
+  }
 }
