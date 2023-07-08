@@ -689,7 +689,6 @@ td {
 .pricing-title {
   margin-bottom: 20px;
   text-align: center;
-
 }
 
 .pricing-table {
@@ -710,11 +709,11 @@ td {
   background: #6d6d6d;
   color: white;
 }
-.pricing-table >* th:nth-child(2) {
+.pricing-table > * th:nth-child(2) {
   color: white;
   background: #373737;
 }
-.pricing-table > *  th:last-child {
+.pricing-table > * th:last-child {
   border-radius: 0px 10px 0px 0px;
   background: #e2c445;
 }
@@ -726,6 +725,104 @@ td {
   text-align: left;
 
   background-color: #f3f3f3;
+}
+
+/* Feedback section */
+
+.feedback {
+  position: relative;
+  min-height: 100vh;
+
+  background: url("./images/index/feedback-section/background.png");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.feedback-title {
+  position: absolute;
+
+  left: 35%;
+  top: 40%;
+
+  width: 40%;
+  color: white;
+  text-align: center;
+
+  transform: translate(-50%, -50%);
+}
+
+.feedback-wrapper {
+  min-height: 20vh;
+
+  padding: 30px;
+  position: absolute;
+
+  top: 0;
+  left: 60%;
+  right: 0;
+  bottom: auto;
+
+  border-radius: 10px;
+  background: var(--acid2);
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.1);
+}
+
+.feedback-inner-wrapper {
+  padding: 30px;
+  height: 100%;
+  border-radius: 10px;
+  background: var(--acid2);
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.1);
+}
+.feedback-form-title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.feedback-inner-wrapper > label {
+  color: rgba(0, 0, 0, 0.4);
+  line-height: 22px;
+}
+
+.feedback-inner-wrapper > input {
+  margin-bottom: 20px;
+  padding: 15px 20px;
+  width: 100%;
+
+  border: none;
+  border-radius: 5px;
+  background: #f2f2f2;
+}
+
+.feedback-inner-wrapper > select,
+option {
+  padding: 15px 20px;
+  width: 100%;
+
+  border: none;
+  border-radius: 5px;
+  background: #f2f2f2;
+
+  margin-bottom: 20px;
+}
+
+.checkbox {
+  display: flex;
+
+  gap: 10px;
+  align-items: center;
+
+  margin-bottom: 30px;
+}
+
+.checkbox > input{
+  display: block;
+
+  border: 1px solid greu;
+  border-radius: 5px;
+  width: 17px !important;
+  height: 17px !important;
+
+  margin: 0;
 }
 @media only screen and (max-width: 1690px) {
   :root {
