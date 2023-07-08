@@ -37,6 +37,14 @@ h5 {
   font-size: var(--font5);
 }
 
+.btn {
+  outline: none;
+  border: none;
+
+  cursor: pointer;
+  background: transparent;
+}
+
 .black-btn {
   padding: 20px;
 
@@ -89,7 +97,8 @@ h5 {
   font-weight: normal;
 }
 
-.horizontal {
+
+.horizontal, .vertical {
   margin-top: auto;
   margin-bottom: 20px;
 
@@ -106,7 +115,13 @@ h5 {
 
   overflow: hidden;
 }
-.horizontal > h4 {
+
+.vertical  {
+  display: block
+  ;
+}
+
+.horizontal, .vertical > h4 {
   padding: 20px;
 }
 
@@ -376,7 +391,29 @@ header {
 
 /*Task section*/
 .task {
+  width: 100%;
+  position: relative;
   padding: 0 256px 50px 256px;
+}
+
+.task::before {
+  content: "";
+
+  position: absolute;
+
+  bottom: 0;
+  right: 0;
+
+  width: 30vw;
+  aspect-ratio: 1;
+
+  background: url("./images/index/task-section/camera.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+
+  transform: translate(0, 50%);
+  z-index: 10;
 }
 
 .task-list {
@@ -398,8 +435,8 @@ header {
   box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.15);
 }
 
-.task-list-item::before{
-  content: '';
+.task-list-item::before {
+  content: "";
 
   position: absolute;
   top: 15px;
@@ -407,12 +444,12 @@ header {
   width: 9px;
   height: 9px;
 
-  background-color: rgba(0, 0, 0, 0.30);
+  background-color: rgba(0, 0, 0, 0.3);
   border-radius: 50%;
 }
 
 .task-list-item::after {
-  content: '';
+  content: "";
 
   position: absolute;
   right: 15px;
@@ -420,7 +457,7 @@ header {
   width: 9px;
   height: 9px;
 
-  background-color: rgba(0, 0, 0, 0.30);
+  background-color: rgba(0, 0, 0, 0.3);
   border-radius: 50%;
 }
 .task-img {
@@ -436,8 +473,109 @@ header {
   font-size: var(--font3);
 
   border-radius: 20px;
-border: 2px dashed rgba(6, 6, 6, 0.30);
+  border: 2px dashed rgba(6, 6, 6, 0.3);
 }
+
+/*Set section*/
+
+.set {
+  padding-left: 150px;
+
+  color: var(--base);
+}
+.set-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  gap: 0;
+  flex-flow: row;
+  align-items: flex-end;
+
+  background-color: var(--base);
+}
+.set-wrapper::after {
+  content: '';
+
+  position: absolute;
+  top: 5%;
+  right: 0;
+  width: 40vw;
+  aspect-ratio: .8;
+  
+  background: url('./images/index/set-section/house.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+
+  z-index: -1;
+}
+.set-table {
+  background: transparent;
+
+  z-index: 10;
+}
+
+.set-table > tbody > tr:first-child > td:first-child {
+  border-radius: 10px 0 0 0;
+}
+
+.set-table > thead > tr:first-child > th:first-child {
+  border-radius: 0 0 10px 0;
+  background-color: var(--base);
+  align-self: top;
+}
+
+.set-table > tbody > tr:last-child > td:first-child {
+  border-radius: 0 0 0 10px;
+}
+
+.set-table > * th,
+td {
+  padding: 25px 40px;
+
+  text-align: center;
+
+  
+  background-color: var(--acid2);
+  border: 0.5px solid rgba(0, 0, 0, 0.2);
+}
+
+.set-table > * th:nth-child(2) {
+  background-color: var(--acid1);
+  border-radius: 10px 0px 0px 0px;
+}
+.set-table > * th:nth-child(3) {
+  background: #f3f3f3;
+  border-radius: 0px 10px 0px 0px;
+}
+
+.set-table > * td:nth-child(1) {
+  background: #f3f3f3;
+}
+
+.row-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 10px;
+}
+
+.row-footer {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.other {
+  display: flex;
+  flex-flow: column;
+  gap: 20px;
+  padding: 15px;
+
+  background-color: var(--base);
+  border-radius: 0 10px 10px 0;
+  z-index: 10;
+}
+
 
 
 
