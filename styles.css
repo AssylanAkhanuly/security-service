@@ -126,7 +126,6 @@ h5 {
   display: block;
 }
 
-
 /*Header*/
 header {
   padding: 10px 150px;
@@ -679,7 +678,55 @@ td {
   object-fit: cover;
 }
 
+/* Pricing Section */
 
+.pricing {
+  padding: 150px;
+
+  background-color: var(--acid2);
+}
+
+.pricing-title {
+  margin-bottom: 20px;
+  text-align: center;
+
+}
+
+.pricing-table {
+  border-radius: 10px;
+
+  text-align: left;
+  overflow: hidden;
+}
+
+.pricing-table > * th {
+  text-align: center;
+
+  padding: 20px;
+}
+
+.pricing-table > * th:first-child {
+  border-radius: 10px 0px 0px 0px;
+  background: #6d6d6d;
+  color: white;
+}
+.pricing-table >* th:nth-child(2) {
+  color: white;
+  background: #373737;
+}
+.pricing-table > *  th:last-child {
+  border-radius: 0px 10px 0px 0px;
+  background: #e2c445;
+}
+
+.pricing-table > tbody > tr > td:first-child {
+  padding: 20px 30px;
+
+  width: 50%;
+  text-align: left;
+
+  background-color: #f3f3f3;
+}
 @media only screen and (max-width: 1690px) {
   :root {
     --font1: 56px;
