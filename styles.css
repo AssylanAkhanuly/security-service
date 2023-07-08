@@ -264,12 +264,12 @@ header {
   margin-top: -50px;
   padding: 0 230px 50px 150px;
 
-overflow: hidden;
+  overflow: hidden;
   z-index: 4;
 }
 
 .equipment::after {
-  content: '';
+  content: "";
 
   position: absolute;
   top: 120%;
@@ -277,16 +277,14 @@ overflow: hidden;
   width: 643px;
   aspect-ratio: 1/2;
 
-  background-image: url('./images/index/equipment-section/circle.svg');
+  background-image: url("./images/index/equipment-section/circle.svg");
   background-position: center;
   background-size: 100%;
   background-repeat: no-repeat;
-  
+
   transform: translate(-50%, -50%);
   z-index: 0;
-
 }
-
 
 .wrapper {
   position: relative;
@@ -306,7 +304,7 @@ overflow: hidden;
   z-index: 3;
 }
 
-.wrapper::after {
+.equipment-wrapper::after {
   content: "";
 
   position: absolute;
@@ -321,10 +319,9 @@ overflow: hidden;
   background-position: center;
   background-size: 100%;
   background-repeat: no-repeat;
-
 }
 
-.equipment-title {
+.section-title {
   width: 80%;
 }
 
@@ -376,6 +373,72 @@ overflow: hidden;
   background-color: var(--acid1);
   border-radius: 50%;
 }
+
+/*Task section*/
+.task {
+  padding: 0 256px 50px 256px;
+}
+
+.task-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  gap: 30px;
+}
+
+.task-list-item {
+  position: relative;
+
+  padding: 30px;
+  width: 31%;
+
+  border-radius: 10px;
+  background: var(--acid2);
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.15);
+}
+
+.task-list-item::before{
+  content: '';
+
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 9px;
+  height: 9px;
+
+  background-color: rgba(0, 0, 0, 0.30);
+  border-radius: 50%;
+}
+
+.task-list-item::after {
+  content: '';
+
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  width: 9px;
+  height: 9px;
+
+  background-color: rgba(0, 0, 0, 0.30);
+  border-radius: 50%;
+}
+.task-img {
+  width: 100%;
+  height: 150px;
+
+  object-fit: cover;
+}
+
+.task-footer {
+  padding: 20px 30px;
+  width: fit-content;
+  font-size: var(--font3);
+
+  border-radius: 20px;
+border: 2px dashed rgba(6, 6, 6, 0.30);
+}
+
 
 
 @media only screen and (max-width: 1690px) {
